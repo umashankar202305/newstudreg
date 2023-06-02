@@ -1,0 +1,55 @@
+<html>
+    {% load static %}
+    <head>        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    
+        <link rel="stylesheet" href="{% static 'css/main.css' %}"> 
+    <style>
+        body{
+            font-family:"roboto";
+            font-size:110%;
+            text-align: center;              
+        }
+   
+    </style>
+    </head>
+    
+    <body>
+        <div class="">  
+            <div class="text-center">
+                <h1>Students Details </h1>
+             </div> 
+            <div class="d-flex flex-row justify-content-center">                
+                <div class="d-flex flex-column justify-content-center">                    
+                    <table  border='1' >
+                        <tr class="">
+                            <th scope="col">S.NO</th>
+                            <th scope="col">First_name</th>
+                            <th scope="col">Last_name</th>
+                            <th scope="col">Sclass</th>
+                            <th scope="col">Schoolname</th>
+                            <th scope="col">board</th>
+                            <th scope="col">phone_no</th>                            
+                        </tr>
+                        <tbody id="form-list-client" class="">
+                        {% csrf_token %}
+                        {% for d in queryset %}
+                            <tr class="text-center ">
+                                <td>{{ forloop.counter }}</td>  
+                                <td>{{ d.First_name }}</td>
+                                <td>{{ d.Last_name }}</td>
+                                <td>{{ d.Sclass }}</td>
+                                <td>{{ d.Schoolname }}</td>
+                                <td>{{ d.board }}</td>
+                                <td>{{ d.phone_no }}</td>                               
+                            </tr>
+                        </tbody>
+                        {% endfor %}
+                    </table>
+                </div>                    
+            </div>
+              
+        </div>
+    </body>

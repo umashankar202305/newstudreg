@@ -1,0 +1,99 @@
+.bg{
+    
+    text-align: center;
+    height: 90vh;    
+    
+}
+.body{
+    background-color: lightgrey;
+    border-color: black;
+    border: 2px;
+    
+}
+.h1{
+   font-weight: bolder;
+   color:darkgoldenrod;
+   font-size: 70px;
+   border: 2px;
+   border-color:black ;
+  
+   
+}
+.card1{
+    background-color: brown;
+    width: 40vw;
+    height: 60vh;
+    border-radius: 10px;
+    color: aliceblue;
+    border-style: groove;
+
+    
+    
+}
+.card2{
+    background-color: cadetblue;
+    width: 40vw;
+    height: 60vh;
+    border-radius: 10px;
+    border-style: groove;
+}
+img{
+  width: 20%;
+  height: 250px;
+  border: 10px; 
+  
+}
+.bgnav{
+    background-color:darkcyan;
+    border-style: groove;
+   
+    color: white;
+
+}
+.hnav1{
+    color: black;
+    padding: 2px;
+}
+.img1{
+    width: 20%;
+  height: 300px;
+}
+.button1{
+    background-color: brown;
+    width: 20vw;
+    margin-left: 40px;
+
+}
+.adminregbg{
+    background-color: lightblue;
+    width: 60vw;
+    height: 60vh;
+}
+.field1{
+    width: 15vw;
+}
+.head{
+    font-weight: bold;
+    font-size: 72px;
+    color: chocolate;
+    text-decoration:solid;
+}
+.regbg{
+    background-color: aquamarine;
+    width: 50vw;
+    height: 50vh;
+}
+.prbg{
+    background-color: rgb(224, 184, 199);
+    width: 50vw;
+    height: 50vh;
+   
+    
+}
+.buttedit{
+   width: 20vw;
+   height: 15vh;
+}
+.tr{
+    background-color: aquamarine;
+}
