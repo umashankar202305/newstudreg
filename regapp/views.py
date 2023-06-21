@@ -7,8 +7,7 @@ from regapp.form import studentform
 from django.db.models import Q
 from django.http import HttpResponse
 from django.template.loader import get_template
-from xhtml2pdf import pisa
-from reportlab.pdfgen import canvas
+
 from django.views import View
 
 
@@ -29,18 +28,7 @@ class  Viewpdf(View):
     def get(self,request,*args,**kwargs):
         pdf=pdf_convert(request,'regapp/pdf.html')
         return HttpResponse(pdf,content_type='aplication/pdf')
-def pdf_convert(request):
-    queryset=suserreg.objects.all()
-    template_path=('regapp/pdf.html')
-    context={'queryset':queryset}
-    result=HttpResponse(context,content_type='aplication/pdf')
-    result['content-disposition']='attachment; filename="reports.pdf"'
-    template=get_template(template_path)
-    html=template.render(context)
-    pisa_status=pisa.CreatePDF(html,dest=result)
-    if pisa_status.err:
-        return HttpResponse('we have error<pre>'+html+'</pre>')
-    return result
+
 def editdata(request,id):   
     edit=suserreg.objects.get(id=id)    
     return render(request,'regapp/update.html',{"edit":edit})
@@ -121,3 +109,5 @@ mycursor=conn.cursor()
 mycursor.execute("show databases")
 for i in mycursor:
     print(i)        
+    
+#nhgnghgmgmj
